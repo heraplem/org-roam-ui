@@ -177,9 +177,6 @@ export function GraphPage() {
       const fileNode = nodesInFile.find((node) => node.level === 0)
       const headingNodes = nodesInFile.filter((node) => node.level !== 0)
 
-      if (!fileNode) {
-        return []
-      }
       return headingNodes.map((headingNode) => {
         const smallerHeadings = nodesInFile.filter((node) => {
           if (
