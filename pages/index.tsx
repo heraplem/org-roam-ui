@@ -197,6 +197,9 @@ export function GraphPage() {
           return acc
         }, fileNode)
 
+        if (!target) {
+          return null
+        }
         return {
           source: headingNode.id,
           target: target?.id || fileNode.id,
